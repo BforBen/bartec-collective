@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://bartec-systems.com/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s1="http://www.bartec-systems.com" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://bartec-systems.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://bartec-systems.com/" xmlns:s1="http://www.bartec-systems.com" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://bartec-systems.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">AuthenticationAPIWebServiceProject</wsdl:documentation>
   <wsdl:types>
     <s:schema elementFormDefault="qualified" targetNamespace="http://bartec-systems.com/">
@@ -88,10 +88,10 @@
   <wsdl:service name="AuthenticationAPIWebService">
     <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">AuthenticationAPIWebServiceProject</wsdl:documentation>
     <wsdl:port name="AuthenticationAPIWebServiceSoap" binding="tns:AuthenticationAPIWebServiceSoap">
-      <soap:address location="https://ws.bartec-systems.com/Auth-Prod/Authenticate.asmx" />
+      <soap:address location="https://collapi.bartec-systems.com/collauth/authenticate.asmx" />
     </wsdl:port>
     <wsdl:port name="AuthenticationAPIWebServiceSoap12" binding="tns:AuthenticationAPIWebServiceSoap12">
-      <soap12:address location="https://ws.bartec-systems.com/Auth-Prod/Authenticate.asmx" />
+      <soap12:address location="https://collapi.bartec-systems.com/collauth/authenticate.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

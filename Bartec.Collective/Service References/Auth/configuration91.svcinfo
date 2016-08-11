@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="vscPqsMYkS94aWg44H5W7eU6zQI=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="G34NGQP35CpO8r6AT6EC4vnPkUU=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="AuthenticationAPIWebServiceSoap">
       <properties>
@@ -221,10 +221,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="AuthenticationAPIWebServiceSoap" contract="Auth.AuthenticationAPIWebServiceSoap" bindingType="basicHttpBinding" address="https://ws.bartec-systems.com/Auth-Prod/Authenticate.asmx" bindingConfiguration="AuthenticationAPIWebServiceSoap">
+    <endpoint name="AuthenticationAPIWebServiceSoap" contract="Auth.AuthenticationAPIWebServiceSoap" bindingType="basicHttpBinding" address="https://collapi.bartec-systems.com/collauth/authenticate.asmx" bindingConfiguration="AuthenticationAPIWebServiceSoap">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>https://ws.bartec-systems.com/Auth-Prod/Authenticate.asmx</serializedValue>
+          <serializedValue>https://collapi.bartec-systems.com/collauth/authenticate.asmx</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

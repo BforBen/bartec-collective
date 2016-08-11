@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="93419b54-55ef-4a18-ad47-9cc03af0ed6a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="07e403de-dda9-4ca2-ab54-34047811a4e1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="https://ws.bartec-systems.com/Auth-Prod/Authenticate.asmx" Protocol="http" SourceId="1" />
+    <MetadataSource Address="https://collapi.bartec-systems.com/collauth/authenticate.asmx" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Authenticate.disco" MetadataType="Disco" ID="a1b90109-f6f1-46df-9505-5cbe05336606" SourceId="1" SourceUrl="https://ws.bartec-systems.com/Auth-Prod/Authenticate.asmx?disco" />
-    <MetadataFile FileName="Authenticate.wsdl" MetadataType="Wsdl" ID="75cab558-c7a1-4138-89ad-1d66ac46a548" SourceId="1" SourceUrl="https://ws.bartec-systems.com/Auth-Prod/Authenticate.asmx?wsdl" />
+    <MetadataFile FileName="authenticate.disco" MetadataType="Disco" ID="6321ab53-09ac-4193-a093-394cae9e3297" SourceId="1" SourceUrl="https://collapi.bartec-systems.com/collauth/authenticate.asmx?disco" />
+    <MetadataFile FileName="authenticate.wsdl" MetadataType="Wsdl" ID="730e274a-503d-4bf7-8e8a-c5dabe263aaf" SourceId="1" SourceUrl="https://collapi.bartec-systems.com/collauth/authenticate.asmx?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

@@ -69,7 +69,7 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Service References\Auth\Authenticate.wsdl" />
+    <None Include="Service References\Auth\authenticate.wsdl" />
     <None Include="Service References\Auth\Bartec.Collective.Auth.AuthenticateResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -578,7 +578,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\Auth\Authenticate.disco" />
+    <None Include="Service References\Auth\authenticate.disco" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\Auth\configuration91.svcinfo" />
