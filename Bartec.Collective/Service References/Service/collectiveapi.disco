@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
-  <contractRef ref="https://collapi.bartec-systems.com/api-r7-15-04-17-01/collectiveapi.asmx?wsdl" docRef="https://collapi.bartec-systems.com/api-r7-15-04-17-01/collectiveapi.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
-  <soap address="https://collapi.bartec-systems.com/api-r7-15-04-17-01/collectiveapi.asmx" xmlns:q1="http://bartec-systems.com/" binding="q1:CollectiveAPIWebServiceSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
-  <soap address="https://collapi.bartec-systems.com/api-r7-15-04-17-01/collectiveapi.asmx" xmlns:q2="http://bartec-systems.com/" binding="q2:CollectiveAPIWebServiceSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <contractRef ref="https://collapi.bartec-systems.com/API-R12002/CollectiveAPI.asmx?wsdl" docRef="https://collapi.bartec-systems.com/API-R12002/CollectiveAPI.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="https://collapi.bartec-systems.com/API-R12002/CollectiveAPI.asmx" xmlns:q1="http://bartec-systems.com/" binding="q1:CollectiveAPIWebServiceSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="https://collapi.bartec-systems.com/API-R12002/CollectiveAPI.asmx" xmlns:q2="http://bartec-systems.com/" binding="q2:CollectiveAPIWebServiceSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
 </discovery>

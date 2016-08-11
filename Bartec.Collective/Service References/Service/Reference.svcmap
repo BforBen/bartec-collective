@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f330538d-222e-4e50-b35b-8808d3595dff" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="dfe06719-fb48-45ff-be9a-4e6a71743253" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="https://collapi.bartec-systems.com/api-r7-15-04-17-01/collectiveapi.asmx" Protocol="http" SourceId="1" />
+    <MetadataSource Address="https://collapi.bartec-systems.com/API-R12002/CollectiveAPI.asmx" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="collectiveapi.wsdl" MetadataType="Wsdl" ID="3feb7b2a-6f22-403f-b875-a431e1ec458c" SourceId="1" SourceUrl="https://collapi.bartec-systems.com/api-r7-15-04-17-01/collectiveapi.asmx?wsdl" />
-    <MetadataFile FileName="collectiveapi.disco" MetadataType="Disco" ID="42edf65a-a705-404d-89a4-64b366d1468e" SourceId="1" SourceUrl="https://collapi.bartec-systems.com/api-r7-15-04-17-01/collectiveapi.asmx?disco" />
+    <MetadataFile FileName="CollectiveAPI.disco" MetadataType="Disco" ID="0a70404e-84d3-4042-9e81-97a0a1ba3d71" SourceId="1" SourceUrl="https://collapi.bartec-systems.com/API-R12002/CollectiveAPI.asmx?disco" />
+    <MetadataFile FileName="CollectiveAPI.wsdl" MetadataType="Wsdl" ID="e093d487-c33d-4e4a-9c69-7eef94156aa5" SourceId="1" SourceUrl="https://collapi.bartec-systems.com/API-R12002/CollectiveAPI.asmx?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

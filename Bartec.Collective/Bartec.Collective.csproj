@@ -64,7 +64,9 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -184,6 +186,12 @@
     <None Include="Service References\Service\Bartec.Collective.Service.Inspections_Classes_GetResult.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\Service\Bartec.Collective.Service.Inspections_GetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service\Bartec.Collective.Service.Inspections_GetResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\Service\Bartec.Collective.Service.Inspections_Statuses_GetResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -236,6 +244,12 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\Service\Bartec.Collective.Service.Licences_Classes_GetResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service\Bartec.Collective.Service.Licences_GetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service\Bartec.Collective.Service.Licences_GetResult.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\Service\Bartec.Collective.Service.Licences_Statuses_GetResponse.datasource">
@@ -526,6 +540,30 @@
     <None Include="Service References\Service\Bartec.Collective.Service.System_WasteTypes_GetResult.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\Service\Bartec.Collective.Service.Vehicles_GetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service\Bartec.Collective.Service.Vehicles_GetResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service\Bartec.Collective.Service.Vehicle_InspectionForms_GetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service\Bartec.Collective.Service.Vehicle_InspectionForms_GetResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service\Bartec.Collective.Service.Vehicle_InspectionResults_GetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service\Bartec.Collective.Service.Vehicle_InspectionResults_GetResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service\Bartec.Collective.Service.Vehicle_Message_CreateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service\Bartec.Collective.Service.Vehicle_Message_CreateResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\Service\Bartec.Collective.Service.WorkGroups_GetResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -556,26 +594,11 @@
     <None Include="Service References\Service\Bartec.Collective.Service.Workpacks_Notes_Types_GetResult.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\Service\collectiveapi.wsdl" />
+    <None Include="Service References\Service\CollectiveAPI.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\Auth\" />
     <WCFMetadataStorage Include="Service References\Service\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\Service\collectiveapi.disco" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\Service\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\Service\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\Service\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\Auth\authenticate.disco" />
@@ -588,6 +611,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\Auth\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service\CollectiveAPI.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
