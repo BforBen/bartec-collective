@@ -1476,6 +1476,8 @@ namespace Bartec.Collective.Service {
         
         private ctVehicleInspectionForm inspectionFormField;
         
+        private ctDevice deviceField;
+        
         private ctVehicleInspectionResultItem[] vehicleInspectionResultItemsField;
         
         private bool automaticDefectReportField;
@@ -1545,7 +1547,19 @@ namespace Bartec.Collective.Service {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public ctDevice Device {
+            get {
+                return this.deviceField;
+            }
+            set {
+                this.deviceField = value;
+                this.RaisePropertyChanged("Device");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=6)]
         [System.Xml.Serialization.XmlArrayItemAttribute("VehicleInspectionResultItem", IsNullable=false)]
         public ctVehicleInspectionResultItem[] VehicleInspectionResultItems {
             get {
@@ -1558,7 +1572,7 @@ namespace Bartec.Collective.Service {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
         public bool AutomaticDefectReport {
             get {
                 return this.automaticDefectReportField;
@@ -1570,7 +1584,7 @@ namespace Bartec.Collective.Service {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
         public bool RequireMileageDeclaration {
             get {
                 return this.requireMileageDeclarationField;
@@ -1582,7 +1596,7 @@ namespace Bartec.Collective.Service {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
         public ctRecordStamp RecordStamp {
             get {
                 return this.recordStampField;
@@ -1862,6 +1876,182 @@ namespace Bartec.Collective.Service {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public ctRecordStamp RecordStamp {
+            get {
+                return this.recordStampField;
+            }
+            set {
+                this.recordStampField = value;
+                this.RaisePropertyChanged("RecordStamp");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.bartec-systems.com")]
+    public partial class ctDevice : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int idField;
+        
+        private int deviceIDField;
+        
+        private ctDeviceType deviceTypeField;
+        
+        private string displayNameField;
+        
+        private string descriptionField;
+        
+        private ctRecordStamp recordStampField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public int ID {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("ID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public int DeviceID {
+            get {
+                return this.deviceIDField;
+            }
+            set {
+                this.deviceIDField = value;
+                this.RaisePropertyChanged("DeviceID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public ctDeviceType DeviceType {
+            get {
+                return this.deviceTypeField;
+            }
+            set {
+                this.deviceTypeField = value;
+                this.RaisePropertyChanged("DeviceType");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public string DisplayName {
+            get {
+                return this.displayNameField;
+            }
+            set {
+                this.displayNameField = value;
+                this.RaisePropertyChanged("DisplayName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public string Description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+                this.RaisePropertyChanged("Description");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public ctRecordStamp RecordStamp {
+            get {
+                return this.recordStampField;
+            }
+            set {
+                this.recordStampField = value;
+                this.RaisePropertyChanged("RecordStamp");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.bartec-systems.com")]
+    public partial class ctDeviceType : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int idField;
+        
+        private string deviceTypeField;
+        
+        private string descriptionField;
+        
+        private ctRecordStamp recordStampField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public int ID {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("ID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string DeviceType {
+            get {
+                return this.deviceTypeField;
+            }
+            set {
+                this.deviceTypeField = value;
+                this.RaisePropertyChanged("DeviceType");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string Description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+                this.RaisePropertyChanged("Description");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
         public ctRecordStamp RecordStamp {
             get {
                 return this.recordStampField;
@@ -5140,182 +5330,6 @@ namespace Bartec.Collective.Service {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=7)]
-        public ctRecordStamp RecordStamp {
-            get {
-                return this.recordStampField;
-            }
-            set {
-                this.recordStampField = value;
-                this.RaisePropertyChanged("RecordStamp");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.bartec-systems.com")]
-    public partial class ctDeviceType : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private int idField;
-        
-        private string deviceTypeField;
-        
-        private string descriptionField;
-        
-        private ctRecordStamp recordStampField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public int ID {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-                this.RaisePropertyChanged("ID");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public string DeviceType {
-            get {
-                return this.deviceTypeField;
-            }
-            set {
-                this.deviceTypeField = value;
-                this.RaisePropertyChanged("DeviceType");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public string Description {
-            get {
-                return this.descriptionField;
-            }
-            set {
-                this.descriptionField = value;
-                this.RaisePropertyChanged("Description");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
-        public ctRecordStamp RecordStamp {
-            get {
-                return this.recordStampField;
-            }
-            set {
-                this.recordStampField = value;
-                this.RaisePropertyChanged("RecordStamp");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.bartec-systems.com")]
-    public partial class ctDevice : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private int idField;
-        
-        private int deviceIDField;
-        
-        private ctDeviceType deviceTypeField;
-        
-        private string displayNameField;
-        
-        private string descriptionField;
-        
-        private ctRecordStamp recordStampField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public int ID {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-                this.RaisePropertyChanged("ID");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public int DeviceID {
-            get {
-                return this.deviceIDField;
-            }
-            set {
-                this.deviceIDField = value;
-                this.RaisePropertyChanged("DeviceID");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public ctDeviceType DeviceType {
-            get {
-                return this.deviceTypeField;
-            }
-            set {
-                this.deviceTypeField = value;
-                this.RaisePropertyChanged("DeviceType");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
-        public string DisplayName {
-            get {
-                return this.displayNameField;
-            }
-            set {
-                this.displayNameField = value;
-                this.RaisePropertyChanged("DisplayName");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
-        public string Description {
-            get {
-                return this.descriptionField;
-            }
-            set {
-                this.descriptionField = value;
-                this.RaisePropertyChanged("Description");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
         public ctRecordStamp RecordStamp {
             get {
                 return this.recordStampField;
@@ -9050,7 +9064,7 @@ namespace Bartec.Collective.Service {
         
         private ctExtendedDataRecordDefinition recordDefinitionField;
         
-        private ctExtendedDataRecordFields fieldsField;
+        private ctExtendedDataRecordField[] fieldField;
         
         private ctRecordStamp recordStampField;
         
@@ -9079,14 +9093,14 @@ namespace Bartec.Collective.Service {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public ctExtendedDataRecordFields Fields {
+        [System.Xml.Serialization.XmlElementAttribute("Field", Order=2)]
+        public ctExtendedDataRecordField[] Field {
             get {
-                return this.fieldsField;
+                return this.fieldField;
             }
             set {
-                this.fieldsField = value;
-                this.RaisePropertyChanged("Fields");
+                this.fieldField = value;
+                this.RaisePropertyChanged("Field");
             }
         }
         
@@ -9763,27 +9777,21 @@ namespace Bartec.Collective.Service {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://www.bartec-systems.com")]
-    public partial class ctExtendedDataRecordFields : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class ctExtendedDataRecordField : object, System.ComponentModel.INotifyPropertyChanged {
         
         private int idField;
         
         private int fieldDefinitionIDField;
         
-        private System.DateTime dateField;
+        private System.Nullable<System.DateTime> dateField;
         
-        private bool dateFieldSpecified;
-        
-        private decimal numberField;
-        
-        private bool numberFieldSpecified;
+        private System.Nullable<decimal> numberField;
         
         private string stringField;
         
         private byte[] binaryField;
         
-        private bool booleanField;
-        
-        private bool booleanFieldSpecified;
+        private System.Nullable<bool> booleanField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -9810,8 +9818,8 @@ namespace Bartec.Collective.Service {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public System.DateTime Date {
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
+        public System.Nullable<System.DateTime> Date {
             get {
                 return this.dateField;
             }
@@ -9822,38 +9830,14 @@ namespace Bartec.Collective.Service {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool DateSpecified {
-            get {
-                return this.dateFieldSpecified;
-            }
-            set {
-                this.dateFieldSpecified = value;
-                this.RaisePropertyChanged("DateSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
-        public decimal Number {
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
+        public System.Nullable<decimal> Number {
             get {
                 return this.numberField;
             }
             set {
                 this.numberField = value;
                 this.RaisePropertyChanged("Number");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool NumberSpecified {
-            get {
-                return this.numberFieldSpecified;
-            }
-            set {
-                this.numberFieldSpecified = value;
-                this.RaisePropertyChanged("NumberSpecified");
             }
         }
         
@@ -9870,7 +9854,7 @@ namespace Bartec.Collective.Service {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary", Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary", IsNullable=true, Order=5)]
         public byte[] Binary {
             get {
                 return this.binaryField;
@@ -9882,26 +9866,14 @@ namespace Bartec.Collective.Service {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
-        public bool Boolean {
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=6)]
+        public System.Nullable<bool> Boolean {
             get {
                 return this.booleanField;
             }
             set {
                 this.booleanField = value;
                 this.RaisePropertyChanged("Boolean");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool BooleanSpecified {
-            get {
-                return this.booleanFieldSpecified;
-            }
-            set {
-                this.booleanFieldSpecified = value;
-                this.RaisePropertyChanged("BooleanSpecified");
             }
         }
         
@@ -25200,17 +25172,18 @@ namespace Bartec.Collective.Service {
         public string token;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bartec-systems.com/", Order=1)]
-        public System.DateTime InspectionDate;
+        public Bartec.Collective.Service.ctDateQuery DateRange;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bartec-systems.com/", Order=2)]
-        public int DeviceID;
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<int> DeviceID;
         
         public Vehicle_InspectionResults_GetRequest() {
         }
         
-        public Vehicle_InspectionResults_GetRequest(string token, System.DateTime InspectionDate, int DeviceID) {
+        public Vehicle_InspectionResults_GetRequest(string token, Bartec.Collective.Service.ctDateQuery DateRange, System.Nullable<int> DeviceID) {
             this.token = token;
-            this.InspectionDate = InspectionDate;
+            this.DateRange = DateRange;
             this.DeviceID = DeviceID;
         }
     }
@@ -27772,10 +27745,10 @@ namespace Bartec.Collective.Service {
             return base.Channel.Vehicle_InspectionResults_Get(request);
         }
         
-        public Bartec.Collective.Service.Vehicle_InspectionResults_GetResult Vehicle_InspectionResults_Get(string token, System.DateTime InspectionDate, int DeviceID) {
+        public Bartec.Collective.Service.Vehicle_InspectionResults_GetResult Vehicle_InspectionResults_Get(string token, Bartec.Collective.Service.ctDateQuery DateRange, System.Nullable<int> DeviceID) {
             Bartec.Collective.Service.Vehicle_InspectionResults_GetRequest inValue = new Bartec.Collective.Service.Vehicle_InspectionResults_GetRequest();
             inValue.token = token;
-            inValue.InspectionDate = InspectionDate;
+            inValue.DateRange = DateRange;
             inValue.DeviceID = DeviceID;
             Bartec.Collective.Service.Vehicle_InspectionResults_GetResponse retVal = ((Bartec.Collective.Service.CollectiveAPIWebServiceSoap)(this)).Vehicle_InspectionResults_Get(inValue);
             return retVal.Vehicle_InspectionResults_GetResult;
@@ -27786,10 +27759,10 @@ namespace Bartec.Collective.Service {
             return base.Channel.Vehicle_InspectionResults_GetAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Bartec.Collective.Service.Vehicle_InspectionResults_GetResponse> Vehicle_InspectionResults_GetAsync(string token, System.DateTime InspectionDate, int DeviceID) {
+        public System.Threading.Tasks.Task<Bartec.Collective.Service.Vehicle_InspectionResults_GetResponse> Vehicle_InspectionResults_GetAsync(string token, Bartec.Collective.Service.ctDateQuery DateRange, System.Nullable<int> DeviceID) {
             Bartec.Collective.Service.Vehicle_InspectionResults_GetRequest inValue = new Bartec.Collective.Service.Vehicle_InspectionResults_GetRequest();
             inValue.token = token;
-            inValue.InspectionDate = InspectionDate;
+            inValue.DateRange = DateRange;
             inValue.DeviceID = DeviceID;
             return ((Bartec.Collective.Service.CollectiveAPIWebServiceSoap)(this)).Vehicle_InspectionResults_GetAsync(inValue);
         }

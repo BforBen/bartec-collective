@@ -1549,8 +1549,8 @@
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
-            <s:element minOccurs="1" maxOccurs="1" name="InspectionDate" type="s:dateTime" />
-            <s:element minOccurs="1" maxOccurs="1" name="DeviceID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="DateRange" type="s2:ctDateQuery" />
+            <s:element minOccurs="1" maxOccurs="1" name="DeviceID" nillable="true" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -1931,16 +1931,16 @@
         <s:sequence>
           <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
           <s:element minOccurs="0" maxOccurs="1" name="RecordDefinition" type="s2:ctExtendedDataRecordDefinition" />
-          <s:element minOccurs="0" maxOccurs="1" name="Fields">
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Field">
             <s:complexType>
               <s:sequence>
                 <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
                 <s:element minOccurs="1" maxOccurs="1" name="FieldDefinitionID" type="s:int" />
-                <s:element minOccurs="0" maxOccurs="1" name="Date" type="s:dateTime" />
-                <s:element minOccurs="0" maxOccurs="1" name="Number" type="s:decimal" />
+                <s:element minOccurs="1" maxOccurs="1" name="Date" nillable="true" type="s:dateTime" />
+                <s:element minOccurs="1" maxOccurs="1" name="Number" nillable="true" type="s:decimal" />
                 <s:element minOccurs="0" maxOccurs="1" name="String" type="s:string" />
-                <s:element minOccurs="0" maxOccurs="1" name="Binary" type="s:base64Binary" />
-                <s:element minOccurs="0" maxOccurs="1" name="Boolean" type="s:boolean" />
+                <s:element minOccurs="1" maxOccurs="1" name="Binary" nillable="true" type="s:base64Binary" />
+                <s:element minOccurs="1" maxOccurs="1" name="Boolean" nillable="true" type="s:boolean" />
               </s:sequence>
             </s:complexType>
           </s:element>
@@ -2497,6 +2497,7 @@
           <s:element minOccurs="1" maxOccurs="1" name="VehicleID" type="s:int" />
           <s:element minOccurs="1" maxOccurs="1" name="DriverID" type="s:int" />
           <s:element minOccurs="0" maxOccurs="1" name="InspectionForm" type="s2:ctVehicleInspectionForm" />
+          <s:element minOccurs="0" maxOccurs="1" name="Device" type="s2:ctDevice" />
           <s:element minOccurs="0" maxOccurs="1" name="VehicleInspectionResultItems" type="s2:ArrayOfCtVehicleInspectionResultItem" />
           <s:element minOccurs="1" maxOccurs="1" name="AutomaticDefectReport" type="s:boolean" />
           <s:element minOccurs="1" maxOccurs="1" name="RequireMileageDeclaration" type="s:boolean" />
@@ -6690,10 +6691,10 @@
   <wsdl:service name="CollectiveAPIWebService">
     <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">CollectiveAPIWebServiceProject</wsdl:documentation>
     <wsdl:port name="CollectiveAPIWebServiceSoap" binding="tns:CollectiveAPIWebServiceSoap">
-      <soap:address location="https://collapi.bartec-systems.com/API-R12002/CollectiveAPI.asmx" />
+      <soap:address location="https://collapi.bartec-systems.com/api-R13001/CollectiveAPI.asmx" />
     </wsdl:port>
     <wsdl:port name="CollectiveAPIWebServiceSoap12" binding="tns:CollectiveAPIWebServiceSoap12">
-      <soap12:address location="https://collapi.bartec-systems.com/API-R12002/CollectiveAPI.asmx" />
+      <soap12:address location="https://collapi.bartec-systems.com/api-R13001/CollectiveAPI.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>
